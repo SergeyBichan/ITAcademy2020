@@ -82,7 +82,7 @@ public class Task1 {
         Float flt;             //Почему я не могу создать геттеры и сеттеры в методе мейн для локальных переменных?
         Double dbl;
         Character chr;
-        Boolean bln;
+        Boolean bln = null;
 
 
         Task1.setAg((byte) 98);
@@ -144,6 +144,7 @@ public class Task1 {
         chr = Task1.getChg();
 
 
+
         System.out.println("integer is: "+ integr);
         System.out.println("bte is: " + bte);
         System.out.println("shrt is: " + shrt);
@@ -151,6 +152,7 @@ public class Task1 {
         System.out.println("flt is: " + flt);
         System.out.println("dbl is: " + dbl);
         System.out.println("chr is: " + chr);
+        System.out.println("bln is: " + bln);
 
 
 
