@@ -9,10 +9,20 @@ public class Task1 {
     static float eg;
     static double fg;
     static char chg;
+    static String sg;
+
+    public static String getSg() {
+        return sg;
+    }
+
+    public static void setSg(String sg) {
+        Task1.sg = sg;
+    }
 
     public static char getChg() {
         return chg;
     }
+
 
     public static void setChg(char chg) {
         Task1.chg = chg;
@@ -69,7 +79,7 @@ public class Task1 {
     public static void main(String[] args) {
         byte al;
         short bl;
-        int cl;
+        int cl;             //Почему я не могу создать геттеры и сеттеры в методе мейн для локальных переменных?
         long dl;
         float el;
         double fl;
@@ -79,14 +89,14 @@ public class Task1 {
         Integer integr;
         Short shrt;
         Long lng;
-        Float flt;             //Почему я не могу создать геттеры и сеттеры в методе мейн для локальных переменных?
+        Float flt;
         Double dbl;
         Character chr;
-        Boolean bln = null;
+        Boolean bln = true;
 
 
         Task1.setAg((byte) 98);
-        Task1.setBg((short) 1154);
+        Task1.setBg((short) 130);
         Task1.setCg(549845);
         Task1.setDg(46843215);
         Task1.setEg((float) 3.1255);
@@ -115,7 +125,7 @@ public class Task1 {
         gl = Task1.getChg();
 
 
-        System.out.println("Locale variables are: ");
+        System.out.println("Local variables are: ");
         System.out.println();
         System.out.println("Variable al is: " + al);
         System.out.println("Variable bl is: " + bl);
@@ -127,25 +137,27 @@ public class Task1 {
         System.out.println();
 
 
+        Task1.setAg((byte) bg);  //установить значение ag(byte) из bg (short) преобразовывая в byte
+        System.out.println("ag (byte) is: " + Task1.getAg());
+        Task1.setBg((short) cg);
+        System.out.println("bg (short) is: " + Task1.getBg());
+        Task1.setCg((int) dg);
+        System.out.println("cg (int) is: " + Task1.getCg());
+        Task1.setEg((float) fl);
+        System.out.println("eg (float) is: " + Task1.getEg());
+        System.out.println();
 
-        Task1.setAg((byte)bg);
-        Task1.setChg((char)bg);
-        Task1.setDg(cg);
-        System.out.println("dg is: "+ dg);
-        System.out.println("char is: " + chg);
 
-
-        integr = Task1.getCg();
         bte = Task1.getAg();
         shrt = Task1.getBg();
+        integr = Task1.getCg();
         lng = Task1.getDg();
         flt = Task1.getEg();
         dbl = Task1.getFg();
         chr = Task1.getChg();
 
 
-
-        System.out.println("integer is: "+ integr);
+        System.out.println("integer is: " + integr);
         System.out.println("bte is: " + bte);
         System.out.println("shrt is: " + shrt);
         System.out.println("lng is: " + lng);
@@ -155,6 +167,13 @@ public class Task1 {
         System.out.println("bln is: " + bln);
 
 
+
+        shrt = (short)bte;
+        integr = (int)shrt;
+        lng = (long)integr;
+        
+        System.out.println("bte => shrt: " + shrt);
+        System.out.println("shrt => integr " + integr);
 
 
     }
