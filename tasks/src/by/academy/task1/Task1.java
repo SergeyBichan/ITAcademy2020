@@ -171,9 +171,16 @@ public class Task1 {
         shrt = (short)bte;
         integr = (int)shrt;
         lng = (long)integr;
+        dbl = (double)flt;
+
+
         
         System.out.println("bte => shrt: " + shrt);
-        System.out.println("shrt => integr " + integr);
+        System.out.println("shrt => integr: " + integr);
+        System.out.println("integr => lng: " + lng);
+        System.out.println("flt => dbl: " + dbl);
+        System.out.println("Integer to string: " + Integer.toString(getAg()));
+        System.out.println();
 
 
     }
