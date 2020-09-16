@@ -1,5 +1,6 @@
 package by.academy.task1;
 
+
 public class Box {
     static String name;
     static double width;
@@ -42,8 +43,8 @@ public class Box {
 
     }
 
-    public Box(String name, double width, float length, int heigth){
-        Box.name= name;
+    public Box(String name, double width, float length, int heigth) {
+        Box.name = name;
         Box.width = width;
         Box.length = length;
         Box.height = height;
@@ -52,29 +53,33 @@ public class Box {
 
 
     public void Volume() {
-        System.out.println("Name is " + getName() + ", width is " + getWidth() + ", length is " + getLength() + ", height is " + getHeight());
+
+        System.out.println("Name is " + getName() + ", width is " + getWidth()
+                + ", length is " + getLength() + ", height is " + getHeight());
         System.out.println("Volume of " + getName() + " is: ");
         System.out.println(getWidth() * getHeight() * getLength());
         System.out.println();
+
     }
 
     public static void main(String[] args) {
 
+
         Box boxFirst = new Box();
         boxFirst.setName("first box");
-        boxFirst.setWidth(5.6);
+        boxFirst.setWidth(0);
         boxFirst.setLength(14l);
         boxFirst.setHeight(21);
 
         boxFirst.Volume();
-//
+
         Box boxSecond = new Box();
         boxSecond.setName("second box");
         boxSecond.setWidth(8.3);
         boxSecond.setLength(8l);
         boxSecond.setHeight(10);
         boxSecond.Volume();
-//
+
         Box boxThird = new Box();
         boxThird.setName("third box");
         boxThird.setWidth(9);
