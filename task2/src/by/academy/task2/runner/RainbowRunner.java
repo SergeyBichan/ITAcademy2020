@@ -8,7 +8,7 @@ public class RainbowRunner {
 
         Rainbow rainbow = new Rainbow();
         rainbow.chooseColour((byte) 6);
-        rainbow.chooseColourSecond((byte) 2, (byte) 4);
+        rainbow.chooseColourSecond((byte)1,(byte)3);
 
 
     }
