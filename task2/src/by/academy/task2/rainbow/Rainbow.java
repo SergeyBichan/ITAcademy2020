@@ -49,7 +49,7 @@ public class Rainbow {
 
 
     public void chooseColour(byte colour) {
-        System.out.print("You choosed ");
+        System.out.print("You chose ");
         choosingColour(colour);
         System.out.println(" color");
 
@@ -59,7 +59,7 @@ public class Rainbow {
 
     public void chooseColour(byte colourFirst, byte colourSecond) {
         System.out.println();
-        System.out.print("You choosed ");
+        System.out.print("You chose ");
         choosingColour(colourFirst);
         System.out.print(" - ");
         choosingColour(colourSecond);
