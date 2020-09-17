@@ -57,7 +57,7 @@ public class Rainbow {
     }
 
 
-    public void chooseColourSecond(byte colourFirst, byte colourSecond) {
+    public void chooseColour(byte colourFirst, byte colourSecond) {
         System.out.println();
         System.out.print("You choosed ");
         choosingColour(colourFirst);
