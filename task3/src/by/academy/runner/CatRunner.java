@@ -8,7 +8,7 @@ public class CatRunner {
         Cat cat = new Cat();
         cat.CreatingCatsByWhile();
 
-       //System.out.println(cat.getRandomName() + "," + cat.getRandomAge());
+       System.out.println(cat.getRandomName() + "," + cat.getRandomAge());
 
        //cat.CreatingCatsByFor();
 
