@@ -47,6 +47,7 @@ public class Cat {
 
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
+            Cat cat = new Cat();
             System.out.println("Name: " + getName() + " " + "Age: " + getAge());
             sumCat++;
         }
