@@ -1,10 +1,25 @@
 package by.academy.cats;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Cat {
     String name = "John";
     int age = 1;
     int sumCat;
 
+    public Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", age=" + age + '\'' +
+                '}';
+    }
 
     public String getName() {
         return name;
@@ -26,10 +41,17 @@ public class Cat {
     public Cat() {
     }
 
-    public Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cat cat = (Cat) o;
+
+        if (age != cat.age) return false;
+        return Objects.equals(name, cat.name);
     }
+
 
 
     public static String getRandomName() {
@@ -83,15 +105,22 @@ public class Cat {
         while (sumCat < 10);
     }
 
+
     public void catArray() {
         Cat[] catsArr = new Cat[10];
         for (int i = 0; i < catsArr.length; i++) {
             catsArr[i] = new Cat(getRandomName(), getRandomAge());
         }
         for (Cat i : catsArr) {
-            System.out.println(i.getName() + " , " + i.getAge());
+            catsArr[0].equals(i);
+           // System.out.println(Arrays.toString(catsArr));
+
+            System.out.println(i);
+
         }
-    }
+
+        System.out.println(catsArr[0].equals(catsArr[1]));
+    }}
 
 
-}
+
