@@ -64,7 +64,7 @@ public class Cat {
 //            setName(getRandomName());
 //            setAge(getRandomAge());
             sumCat++;
-            System.out.println("name " + getName() + "," + "age " + getAge());
+            System.out.println(toString());
         }
 
     }
@@ -73,7 +73,7 @@ public class Cat {
         for (int i = 0; i < 10; i++) {
             setName(getRandomName());
             setAge(getRandomAge());
-            System.out.println("name " + getName() + "," + "age " + getAge());
+            System.out.println(toString());
 
         }
     }
@@ -84,7 +84,7 @@ public class Cat {
         do {
             setName(getRandomName());
             setAge(getRandomAge());
-            System.out.println(getName() + " " + getAge());
+            System.out.println(toString());
             sumCat++;
 
         }
@@ -99,6 +99,7 @@ public class Cat {
         for (Cat i : catsArr) {
             System.out.println(i);
         }
+        System.out.println();
 
         for (int i = 0; i < catsArr.length - 1; i++) {
             System.out.println("object " + catsArr[i] + " and " +
