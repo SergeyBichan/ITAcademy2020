@@ -17,15 +17,5 @@ public class CatRunner {
         cat.CreatingCatsByDoWhile();
 
         cat.catArray();
-
-
-/*        Cat[] cat = new Cat[10];
-        //for(int i = 0; i < 10; i++) {
-        //cat[i] = new Cat("DFD",10);
-        cat[0] = new Cat("Томас",2);
-        cat[1] = new Cat();
-        cat[2] = new Cat();
-        // System.out.println(cat[0].toString());
-        System.out.println(Arrays.toString(cat));*/
     }
 }

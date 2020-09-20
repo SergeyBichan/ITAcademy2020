@@ -100,9 +100,9 @@ public class Cat {
             System.out.println(i);
         }
 
-        for (int i = 0; i < catsArr.length-1; i++) {
+        for (int i = 0; i < catsArr.length - 1; i++) {
             System.out.println("object " + catsArr[i] + " and " +
-                    "object " + catsArr[i+1] + " is " + catsArr[i].equals(catsArr[i+1]));
+                    "object " + catsArr[i + 1] + " is " + catsArr[i].equals(catsArr[i + 1]));
         }
 
     }
