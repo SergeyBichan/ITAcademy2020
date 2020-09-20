@@ -83,16 +83,13 @@ public class Cat {
         while (sumCat < 10);
     }
 
-    public void catArray(){
+    public void catArray() {
         Cat[] catsArr = new Cat[10];
-        for (int i = 0; i < catsArr.length ; i++) {
-            catsArr[i] = new Cat();
+        for (int i = 0; i < catsArr.length; i++) {
+            catsArr[i] = new Cat(getRandomName(), getRandomAge());
         }
-        for (Cat cat: catsArr) {
-            setName(getRandomName());
-            setAge(getRandomAge());
-            System.out.println(getName() + " , " + getAge());
-
+        for (Cat i : catsArr) {
+            System.out.println(i.getName() + " , " + i.getAge());
         }
     }
 
