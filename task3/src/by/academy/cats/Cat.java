@@ -2,7 +2,7 @@ package by.academy.cats;
 
 public class Cat {
     String name = "John";
-    int age = 1;
+    int age;
     int sumCat;
 
 
@@ -26,6 +26,11 @@ public class Cat {
     public Cat() {
     }
 
+    public Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
 
     public static String getRandomName() {
         String result = "";
@@ -45,17 +50,46 @@ public class Cat {
         return result;
     }
 
+
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
             Cat cat = new Cat();
-            System.out.println("Name: " + getName() + " " + "Age: " + getAge());
+            setName(getRandomName());
+            setAge(getRandomAge());
             sumCat++;
+            System.out.println(cat.toString());
         }
+
     }
 
-    public void CreatingCatsByFor() {
+    public String CreatingCatsByFor() {
         for (int i = 0; i < 10; i++) {
-            System.out.println(getRandomAge() + "," + getRandomName());
+            Cat cat = new Cat();
+            setName(getRandomName());
+            setAge(getRandomAge());
+            System.out.println(cat.toString());
+
         }
+        return toString();
     }
+
+    @Override
+    public String toString() {
+        return "Name " + getName() + ", " + "age " + getAge();
+    }
+
+    public void CreatingCatsByDoWhile() {
+        sumCat = 0;
+        do {
+            Cat cat = new Cat(getRandomName(), getRandomAge());
+//            setName(getRandomName());
+//            setAge(getRandomAge());
+            System.out.println(getName() + " " + getAge());
+            sumCat++;
+
+        }
+        while (sumCat < 10);
+    }
+
+
 }

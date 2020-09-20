@@ -5,12 +5,14 @@ import by.academy.cats.Cat;
 
 public class CatRunner {
     public static void main(String[] args) {
+
         Cat cat = new Cat();
-        cat.CreatingCatsByWhile();
+       // cat.CreatingCatsByWhile();
+        System.out.println();
+        cat.CreatingCatsByFor();
 
-       System.out.println(cat.getRandomName() + "," + cat.getRandomAge());
-
-       //cat.CreatingCatsByFor();
+        //Cat cat1 = new Cat(Cat.getRandomName(), Cat.getRandomAge());
+        //cat.CreatingCatsByDoWhile();
 
 
     }
