@@ -11,8 +11,8 @@ public class CatRunner {
         System.out.println();
         cat.CreatingCatsByFor();
 
-        Cat cat1 = new Cat(Cat.getRandomName(), Cat.getRandomAge());
-        cat1.CreatingCatsByDoWhile();
+        cat = new Cat(Cat.getRandomName(), Cat.getRandomAge());
+        cat.CreatingCatsByDoWhile();
 
         cat.catArray();
 
