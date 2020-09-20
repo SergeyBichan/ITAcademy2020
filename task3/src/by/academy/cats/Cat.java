@@ -18,6 +18,14 @@ public class Cat {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name=" + name +
+                ", age=" + age +
+                '}';
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -89,8 +97,14 @@ public class Cat {
             catsArr[i] = new Cat(getRandomName(), getRandomAge());
         }
         for (Cat i : catsArr) {
-            System.out.println(i.getName() + " , " + i.getAge());
+            System.out.println(i);
         }
+
+        for (int i = 0; i < catsArr.length-1; i++) {
+            System.out.println("object " + catsArr[i] + " and " +
+                    "object " + catsArr[i+1] + " is " + catsArr[i].equals(catsArr[i+1]));
+        }
+
     }
 
 
