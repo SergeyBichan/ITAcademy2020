@@ -61,8 +61,8 @@ public class Cat {
 
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
-            setName(getRandomName());
-            setAge(getRandomAge());
+//            setName(getRandomName());
+//            setAge(getRandomAge());
             sumCat++;
             System.out.println("name " + getName() + "," + "age " + getAge());
         }
