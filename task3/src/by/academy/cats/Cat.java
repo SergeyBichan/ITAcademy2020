@@ -32,11 +32,14 @@ public class Cat {
 
 
     public Cat() {
+
     }
 
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
+
+
     }
 
 
@@ -53,18 +56,25 @@ public class Cat {
 
     public static int getRandomAge() {
         int result = 0;
+
         int i = (int) (Math.random() * 20 + 1);
+
+        int i = (int) (Math.random() * 20);
+
         result = result + i;
         return result;
     }
 
-
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
             Cat cat = new Cat();
+
+  System.out.println("Name: " + getName() + " " + "Age: " + getAge());
+
             sumCat++;
             System.out.println(cat.toString());
         }
+
 
     }
 
@@ -87,6 +97,10 @@ public class Cat {
             System.out.println(toString());
             sumCat++;
 
+    public void CreatingCatsByFor() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(getRandomAge() + "," + getRandomName());
+
         }
         while (sumCat < 10);
     }
@@ -108,6 +122,4 @@ public class Cat {
         }
 
     }
-
-
 }
