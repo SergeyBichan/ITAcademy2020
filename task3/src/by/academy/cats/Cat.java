@@ -61,16 +61,16 @@ public class Cat {
 
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
-//            setName(getRandomName());
-//            setAge(getRandomAge());
+            Cat cat = new Cat();
             sumCat++;
-            System.out.println(toString());
+            System.out.println(cat.toString());
         }
 
     }
 
     public void CreatingCatsByFor() {
         for (int i = 0; i < 10; i++) {
+            Cat cat = new Cat();
             setName(getRandomName());
             setAge(getRandomAge());
             System.out.println(toString());
@@ -103,7 +103,8 @@ public class Cat {
 
         for (int i = 0; i < catsArr.length - 1; i++) {
             System.out.println("object " + catsArr[i] + " and " +
-                    "object " + catsArr[i + 1] + " is " + catsArr[i].equals(catsArr[i + 1]));
+                    "object " + catsArr[i + 1] + " is " +
+                    catsArr[i].equals(catsArr[i + 1]));
         }
 
     }
