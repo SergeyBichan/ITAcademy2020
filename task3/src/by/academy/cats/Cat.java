@@ -32,14 +32,11 @@ public class Cat {
 
 
     public Cat() {
-
     }
 
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
-
-
     }
 
 
@@ -56,34 +53,27 @@ public class Cat {
 
     public static int getRandomAge() {
         int result = 0;
-
         int i = (int) (Math.random() * 20 + 1);
-
-        int i = (int) (Math.random() * 20);
-
         result = result + i;
         return result;
     }
 
+
     public void CreatingCatsByWhile() {
         while (sumCat < 10) {
-            Cat cat = new Cat();
-
-  System.out.println("Name: " + getName() + " " + "Age: " + getAge());
-
+//            setName(getRandomName());
+//            setAge(getRandomAge());
             sumCat++;
-            System.out.println(cat.toString());
+            System.out.println("name " + getName() + "," + "age " + getAge());
         }
-
 
     }
 
     public void CreatingCatsByFor() {
         for (int i = 0; i < 10; i++) {
-            Cat cat = new Cat();
             setName(getRandomName());
             setAge(getRandomAge());
-            System.out.println(toString());
+            System.out.println("name " + getName() + "," + "age " + getAge());
 
         }
     }
@@ -94,12 +84,8 @@ public class Cat {
         do {
             setName(getRandomName());
             setAge(getRandomAge());
-            System.out.println(toString());
+            System.out.println(getName() + " " + getAge());
             sumCat++;
-
-    public void CreatingCatsByFor() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(getRandomAge() + "," + getRandomName());
 
         }
         while (sumCat < 10);
@@ -113,13 +99,13 @@ public class Cat {
         for (Cat i : catsArr) {
             System.out.println(i);
         }
-        System.out.println();
 
         for (int i = 0; i < catsArr.length - 1; i++) {
             System.out.println("object " + catsArr[i] + " and " +
-                    "object " + catsArr[i + 1] + " is " +
-                    catsArr[i].equals(catsArr[i + 1]));
+                    "object " + catsArr[i + 1] + " is " + catsArr[i].equals(catsArr[i + 1]));
         }
 
     }
+
+
 }
