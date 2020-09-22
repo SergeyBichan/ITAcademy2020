@@ -60,14 +60,13 @@ public class Cat {
 
 
     public void CreatingCatsByWhile() {
-        while (sumCat < 10) {
-//            setName(getRandomName());
-//            setAge(getRandomAge());
+        while (sumCat < 10) setName(getRandomName());
+         setAge(getRandomAge());
             sumCat++;
             System.out.println("name " + getName() + "," + "age " + getAge());
         }
 
-    }
+
 
     public void CreatingCatsByFor() {
         for (int i = 0; i < 10; i++) {

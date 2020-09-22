@@ -3,8 +3,6 @@ package by.academy.runner;
 
 import by.academy.cats.Cat;
 
-import java.util.Arrays;
-
 public class CatRunner {
     public static void main(String[] args) {
 
