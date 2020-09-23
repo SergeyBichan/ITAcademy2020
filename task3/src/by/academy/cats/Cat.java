@@ -1,5 +1,7 @@
 package by.academy.cats;
 
+import java.util.Objects;
+
 public class Cat {
     String name = "John";
     int age = 1;
@@ -39,6 +41,20 @@ public class Cat {
         this.age = age;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return age == cat.age &&
+                sumCat == cat.sumCat &&
+                Objects.equals(name, cat.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, sumCat);
+    }
 
     public static String getRandomName() {
         String result = "";
@@ -90,6 +106,8 @@ public class Cat {
         }
         while (sumCat < 10);
     }
+
+
 
     public void catArray() {
         Cat[] catsArr = new Cat[10];
