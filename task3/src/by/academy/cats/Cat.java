@@ -76,20 +76,19 @@ public class Cat {
 
 
     public void CreatingCatsByWhile() {
-        while (sumCat < 10) {
-//            setName(getRandomName());
-//            setAge(getRandomAge());
-            sumCat++;
-            System.out.println("name " + getName() + "," + "age " + getAge());
-        }
+        while (sumCat < 10)
+            System.out.println(new Cat().toString());
+        sumCat++;
 
     }
 
+
     public void CreatingCatsByFor() {
         for (int i = 0; i < 10; i++) {
-            setName(getRandomName());
-            setAge(getRandomAge());
-            System.out.println("name " + getName() + "," + "age " + getAge());
+            Cat cat = new Cat();
+            cat.setName(getRandomName());
+            cat.setAge(getRandomAge());
+            System.out.println(cat.toString());
 
         }
     }
@@ -98,9 +97,10 @@ public class Cat {
     public void CreatingCatsByDoWhile() {
         sumCat = 0;
         do {
-            setName(getRandomName());
-            setAge(getRandomAge());
-            System.out.println(getName() + " " + getAge());
+            Cat cat = new Cat();
+            cat.setName(getRandomName());
+            cat.setAge(getRandomAge());
+            System.out.println(cat.toString());
             sumCat++;
 
         }
