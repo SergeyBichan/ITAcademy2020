@@ -9,8 +9,11 @@ public class Cat {
 
     public Cat(String name, int age, Tail tail) {
         this.name = name;
+        age = 10;
         this.age = age;
+        tail.setColour("red");
         this.tail = tail;
+
     }
 
     int sumCat;
