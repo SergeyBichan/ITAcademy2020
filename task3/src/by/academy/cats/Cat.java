@@ -5,8 +5,23 @@ import java.util.Objects;
 public class Cat {
     String name = "John";
     int age = 1;
+    private Tail tail;
+
+    public Cat(String name, int age, Tail tail) {
+        this.name = name;
+        this.age = age;
+        this.tail = tail;
+    }
+
     int sumCat;
 
+    public Tail getTail() {
+        return tail;
+    }
+
+    public void setTail(Tail tail) {
+        this.tail = tail;
+    }
 
     public String getName() {
         return name;
@@ -23,8 +38,9 @@ public class Cat {
     @Override
     public String toString() {
         return "Cat{" +
-                "name=" + name +
+                "name='" + name + '\'' +
                 ", age=" + age +
+                ", tail=" + tail +
                 '}';
     }
 
@@ -41,15 +57,18 @@ public class Cat {
         this.age = age;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) return true;           //сравнение обьектов(сравнивание ссылок)
+        if (o == null || getClass() != o.getClass()) return false;   // сравнение класов
         Cat cat = (Cat) o;
         return age == cat.age &&
                 sumCat == cat.sumCat &&
                 Objects.equals(name, cat.name);
     }
+
 
     @Override
     public int hashCode() {
