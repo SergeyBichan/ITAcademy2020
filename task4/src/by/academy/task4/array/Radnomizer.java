@@ -4,7 +4,7 @@ public class Radnomizer {
     //Заполняет массив
     public static String[][] initArrWithRandomStrings(String[][] matrice, int strLength) {
         for (int i = 0; i < matrice.length; i++) {
-            for (int j = 0; j < matrice[i].length; j++) {
+            for (int j = 0; j < matrice.length; j++) {
                 if (j % 2 == 0) {
                     matrice[i][j] = getRandomeChar(strLength);
 
@@ -23,7 +23,7 @@ public class Radnomizer {
     //Печатает массив
     public static void printArr(String matrice[][]) {
         for (int i = 0; i < matrice.length; i++) {
-            for (int j = 0; j < matrice[i].length; j++) {
+            for (int j = 0; j < matrice.length; j++) {
                 System.out.print(matrice[i][j] + " ");
             }
             System.out.println();
@@ -52,24 +52,24 @@ public class Radnomizer {
     }
 
 
-    public static void getPrimaryDiag(String matrice[][], int stringLength){
-        for (int i = 0; i < matrice.length; i++) {
-            for (int j = 0; j < matrice[i].length ; j++) {
-                if (i < j) {
-                    aboveMain[i][j] = arr[i][j];
-                }
-                if (i > j) {
-                    underMain[i][j] = arr[i][j];
-                }
-                if (i + j < n + 1) {
-                    aboveSecond[i][j] = arr[i][j];
-                }
-                if (i + j > n + 1) {
-                    underSecond[i][j] = arr[i][j];
-                }
-            }
-        }
-
-    }
+//    public static void getPrimaryDiag(String matrice[][], int stringLength){
+//        for (int i = 0; i < matrice.length; i++) {
+//            for (int j = 0; j < matrice[i].length ; j++) {
+//                if (i < j) {
+//                    aboveMain[i][j] = arr[i][j];
+//                }
+//                if (i > j) {
+//                    underMain[i][j] = arr[i][j];
+//                }
+//                if (i + j < n + 1) {
+//                    aboveSecond[i][j] = arr[i][j];
+//                }
+//                if (i + j > n + 1) {
+//                    underSecond[i][j] = arr[i][j];
+//                }
+//            }
+//        }
+//
+//    }
 
 }
