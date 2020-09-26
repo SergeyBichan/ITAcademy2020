@@ -7,21 +7,21 @@ public class Main {
         int strLength = 6;
         int sizeFirst = 10;
         int sizeSecond = 10;
+        String[] doublDiag = new String[sizeFirst];
         String[] primDiag = new String[sizeFirst];
         String[][] matrix = new String[sizeFirst][sizeSecond];
 
         Radnomizer.initArrWithRandomStrings(matrix, strLength);
         Radnomizer.printArr(matrix);
-        Radnomizer.getPrimaryDiag(matrix, primDiag);
+        Radnomizer.getDiags(matrix, primDiag, doublDiag, sizeFirst);
 
-        System.out.println();
+
+        System.out.println("Главная диагональ: ");
         Radnomizer.printArrSolo(primDiag);
+        System.out.println("Побочная диагональ: ");
+        Radnomizer.printArrSolo(doublDiag);
 
-
-
-
-
-
+        System.out.println(primDiag.equals(doublDiag));
 
 
 

@@ -9,7 +9,7 @@ public class Radnomizer {
                     matrice[i][j] = getRandomeChar(strLength);
 
                 } else {
-                    matrice[i][j] = String.valueOf(getRandomeNum());
+                    matrice[i][j] = String.valueOf(getRandomeNum(strLength));
                 }
 
             }
@@ -31,15 +31,19 @@ public class Radnomizer {
         }
 
     }
-//  пытался понять записало оно мне в отдельный массив эту даигональ или нет.. если что так и не понял
-    public static void printArrSolo(String primDiag[]) {
-        for (int i = 0; i < primDiag.length; i++) {
 
-                System.out.print(primDiag[i] + " ");
+    //  пытался понять записало оно мне в отдельный массив эту даигональ или нет.. если что так и не понял
+    //вроде понял
+    //это ужасно.. я пишу и теряю мысль на ходу
+
+    public static void printArrSolo(String diag[]) {
+        for (int i = 0; i < diag.length; i++) {
+
+            System.out.print(diag[i] + " ");
         }
+        System.out.println();
 
     }
-
 
 
     public static String getRandomeChar(int stringLength) {
@@ -53,29 +57,31 @@ public class Radnomizer {
         return result;
     }
 
-    public static double getRandomeNum() {
-        int result = 0;
-        int i = (int) (Math.random() * 20 + 1);
+    public static double getRandomeNum(int strLength) {
+        double result = 0;
+        double i = (Math.random() * 20 + 1);
         result = result + i;
         return result;
     }
 
-
-    public static void getPrimaryDiag(String matrice[][], String primDig[]) {
-        System.out.println("Главная диагональ ");
+    //не понимаю пока как разнести по разным методам вывод диагоналей. но разберусь думаю
+    public static void getDiags(String[][] matrice, String[] primDig, String[] doublDiag, int sizeFirst) {
+        System.out.println();
         for (int i = 0; i < matrice.length; i++) {
             for (int j = 0; j < matrice[i].length; j++) {
                 if (i == j) {
                     primDig[i] = matrice[i][j];
-                    System.out.print(matrice[i][j] + " ");
+
+                }
+                if (i + j == sizeFirst - 1) {
+                    doublDiag[i] = matrice[i][j];
+
                 }
 
             }
         }
 
     }
-
-
 
 
 }
