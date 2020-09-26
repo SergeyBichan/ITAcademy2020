@@ -31,6 +31,15 @@ public class Radnomizer {
         }
 
     }
+//  пытался понять записало оно мне в отдельный массив эту даигональ или нет.. если что так и не понял
+    public static void printArrSolo(String primDiag[]) {
+        for (int i = 0; i < primDiag.length; i++) {
+
+                System.out.print(primDiag[i] + " ");
+        }
+
+    }
+
 
 
     public static String getRandomeChar(int stringLength) {
@@ -44,7 +53,7 @@ public class Radnomizer {
         return result;
     }
 
-    public static int getRandomeNum() {
+    public static double getRandomeNum() {
         int result = 0;
         int i = (int) (Math.random() * 20 + 1);
         result = result + i;
@@ -52,24 +61,21 @@ public class Radnomizer {
     }
 
 
-    public static void getPrimaryDiag(String matrice[][], int stringLength){
+    public static void getPrimaryDiag(String matrice[][], String primDig[]) {
+        System.out.println("Главная диагональ ");
         for (int i = 0; i < matrice.length; i++) {
-            for (int j = 0; j < matrice[i].length ; j++) {
-                if (i < j) {
-                    aboveMain[i][j] = arr[i][j];
+            for (int j = 0; j < matrice[i].length; j++) {
+                if (i == j) {
+                    primDig[i] = matrice[i][j];
+                    System.out.print(matrice[i][j] + " ");
                 }
-                if (i > j) {
-                    underMain[i][j] = arr[i][j];
-                }
-                if (i + j < n + 1) {
-                    aboveSecond[i][j] = arr[i][j];
-                }
-                if (i + j > n + 1) {
-                    underSecond[i][j] = arr[i][j];
-                }
+
             }
         }
 
     }
+
+
+
 
 }
