@@ -15,6 +15,6 @@ public class Main {
         System.out.println(age);
         Cat cat = new Cat("Bill", age, tail);
         System.out.println(tail);
-        System.out.println(age);
+        System.out.println(cat.getAge());
     }
 }
