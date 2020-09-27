@@ -2,6 +2,8 @@ package by.academy.task4;
 
 import by.academy.task4.array.Radnomizer;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -14,8 +16,9 @@ public class Main {
         String[] primDiag = new String[sizeFirst];
         String[][] matrix = new String[sizeFirst][sizeFirst];
         String[] bothDiags = new String[primDiag.length + doublDiag.length];
-        Double[] arrOfNums = new Double[sizeFirst];
-        String[] arrOfChars = new String[sizeFirst];
+        ArrayList<Double> arrOfNums = new ArrayList<>();
+        ArrayList<String> arrOfChars = new ArrayList<>();
+//
 
         Radnomizer.initArrWithRandomStrings(matrix, strLength);
         Radnomizer.printArr(matrix);
@@ -32,26 +35,49 @@ public class Main {
         Radnomizer.creatingArrayDromDiags(primDiag, doublDiag, bothDiags);
         System.out.println();
 
-        String[] string = new String[sizeFirst];
-        Double[] num = new Double[sizeSecond];
-        for (int i = 0; i < bothDiags.length; i++) {
-            if(Radnomizer.isDouble(bothDiags[i])){
-              num[i] = Double.parseDouble(bothDiags[i]);
+
+        //StringBuilder strBuildFir, strBuildSec = new StringBuilder();
+        for (int i = 0; i < sizeSecond; i++) {
+            if (Radnomizer.isDouble(bothDiags[i])) {
+                double d = Double.parseDouble(bothDiags[i]);
+                arrOfNums.add(d);
 
             }
-//            else {
+            else {
+                String s = bothDiags[i];
+                arrOfChars.add(s);
+            }
+
+
+        }
+        System.out.println(arrOfNums);
+        System.out.println(arrOfChars);
+
+
+
+
+
+//        String[] string = new String[sizeFirst];
 //
+//        for (int i = 0; i < sizeFirst * 2; i++) {
+//            if(Radnomizer.isDouble(bothDiags[i])){
+//              num[i] = Double.parseDouble(bothDiags[i]);
 //
 //            }
+////            else {
+////
+////
+////            }
 
 
-        }
-        for (int i = 0; i < num.length; i++) {
-            if( num[i] != null){
-                arrOfNums[i] = num[i];
-            }
-        }
-        System.out.println(Arrays.toString(arrOfNums));
+//        }
+//        System.out.println(Arrays.toString(num));
+////        for (int i = 0; i < num.length; i++) {
+////            if( num[i] != null){
+////                arrOfNums[i] = num[i];
+////            }
+//        }
+//        System.out.println(Arrays.toString(arrOfNums));
 
 
     }
