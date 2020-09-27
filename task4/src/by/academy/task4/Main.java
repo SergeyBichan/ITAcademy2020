@@ -9,10 +9,10 @@ public class Main {
     public static void main(String[] args) {
         int strLength = 6;
         int sizeFirst = 10;
-        int sizeSecond = 10;
+        int sizeSecond = 20;
         String[] doublDiag = new String[sizeFirst];
         String[] primDiag = new String[sizeFirst];
-        String[][] matrix = new String[sizeFirst][sizeSecond];
+        String[][] matrix = new String[sizeFirst][sizeFirst];
         String[] bothDiags = new String[primDiag.length + doublDiag.length];
         Double[] arrOfNums = new Double[sizeFirst];
         String[] arrOfChars = new String[sizeFirst];
@@ -29,26 +29,29 @@ public class Main {
 
         System.out.println(primDiag.equals(doublDiag));
         System.out.println("Слияние: ");
-        Radnomizer.CreatingArrayDromDiags(primDiag, doublDiag, bothDiags);
+        Radnomizer.creatingArrayDromDiags(primDiag, doublDiag, bothDiags);
         System.out.println();
 
-       Double[] test = new Double[sizeFirst];
+        String[] string = new String[sizeFirst];
+        Double[] num = new Double[sizeSecond];
         for (int i = 0; i < bothDiags.length; i++) {
-            try{
-                Double.parseDouble(bothDiags[i]);
-              //  test[i] = bothDiags[i];
-
+            if(Radnomizer.isDouble(bothDiags[i])){
+              num[i] = Double.parseDouble(bothDiags[i]);
 
             }
-            catch (NumberFormatException e){
+//            else {
+//
+//
+//            }
 
-                System.out.println("Ошибка");
-            }
 
         }
-        System.out.println(Arrays.toString(test));
-
-
+        for (int i = 0; i < num.length; i++) {
+            if( num[i] != null){
+                arrOfNums[i] = num[i];
+            }
+        }
+        System.out.println(Arrays.toString(arrOfNums));
 
 
     }

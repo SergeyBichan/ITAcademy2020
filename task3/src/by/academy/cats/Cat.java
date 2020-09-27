@@ -110,7 +110,7 @@ public class Cat {
             Cat cat = new Cat();
             cat.setName(getRandomName());
             cat.setAge(getRandomAge());
-            System.out.println(cat.toString());
+            System.out.println(cat);
 
         }
     }
