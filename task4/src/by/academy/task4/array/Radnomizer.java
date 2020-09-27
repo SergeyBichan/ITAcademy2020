@@ -1,5 +1,7 @@
 package by.academy.task4.array;
 
+import java.util.Arrays;
+
 public class Radnomizer {
     //Заполняет массив
     public static String[][] initArrWithRandomStrings(String[][] matrice, int strLength) {
@@ -9,7 +11,7 @@ public class Radnomizer {
                     matrice[i][j] = getRandomeChar(strLength);
 
                 } else {
-                    matrice[i][j] = String.valueOf(getRandomeNum(strLength));
+                    matrice[i][j] = getRandomeNum(strLength);
                 }
 
             }
@@ -57,11 +59,11 @@ public class Radnomizer {
         return result;
     }
 
-    public static double getRandomeNum(int strLength) {
-        double result = 0;
-        double i = (Math.random() * 20 + 1);
-        result = result + i;
-        return result;
+    public static String getRandomeNum(int strLength) {
+        String result;
+        double i = (Math.random() * 9);
+        result = String.format("%.3f", i);
+        return result.replace(",", ".");
     }
 
     //не понимаю пока как разнести по разным методам вывод диагоналей. но разберусь думаю
@@ -83,5 +85,20 @@ public class Radnomizer {
 
     }
 
+    public static void CreatingArrayDromDiags(String[] primDiag, String[] doublDiag, String[] bothDiags) {
+        int count = 0;
+        for (int i = 0; i < primDiag.length; i++) {
+            bothDiags[i] = primDiag[i];
+            count++;
+        }
+        for (int j = 0; j < doublDiag.length; j++) {
+            bothDiags[count++] = doublDiag[j];
+        }
+        for (int i = 0; i < bothDiags.length; i++)
+            System.out.print(bothDiags[i] + " ");
+    }
 
+//    public static void TryingToCatchExcept(){
+//
+//    }
 }
