@@ -1,5 +1,7 @@
 package by.academy.task4.array;
 
+import java.util.ArrayList;
+
 public class Radnomizer {
 
     public static void initArrWithRandomStrings(String[][] matrice, int strLength) {
@@ -88,6 +90,24 @@ public class Radnomizer {
             return false;
         }
         return true;
+    }
+
+
+    public static void parsingArrayLists(ArrayList<Double> arrOfNums, ArrayList<String> arrOfChars,
+                                         String[]bothDiags, int sizeSecond){
+        for (int i = 0; i < sizeSecond; i++) {
+            if (Radnomizer.isDouble(bothDiags[i])) {
+                double d = Double.parseDouble(bothDiags[i]);
+                arrOfNums.add(d);
+
+            }
+            else {
+                String s = bothDiags[i];
+                arrOfChars.add(s);
+            }
+
+
+        }
     }
 
 

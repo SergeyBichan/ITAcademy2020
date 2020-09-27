@@ -35,21 +35,7 @@ public class Main {
         Radnomizer.creatingArrayDromDiags(primDiag, doublDiag, bothDiags);
         System.out.println();
 
-
-        //StringBuilder strBuildFir, strBuildSec = new StringBuilder();
-        for (int i = 0; i < sizeSecond; i++) {
-            if (Radnomizer.isDouble(bothDiags[i])) {
-                double d = Double.parseDouble(bothDiags[i]);
-                arrOfNums.add(d);
-
-            }
-            else {
-                String s = bothDiags[i];
-                arrOfChars.add(s);
-            }
-
-
-        }
+        Radnomizer.parsingArrayLists(arrOfNums, arrOfChars, bothDiags, sizeSecond);
         System.out.println(arrOfNums);
         System.out.println(arrOfChars);
 
