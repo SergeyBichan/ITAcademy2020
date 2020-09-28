@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Побочная диагональ: ");
         Radnomizer.printArrSolo(doublDiag);
 
-        System.out.println(primDiag.equals(doublDiag));
+        System.out.println(Arrays.equals(primDiag, doublDiag));
         System.out.println("Слияние: ");
         Radnomizer.creatingArrayDromDiags(primDiag, doublDiag, bothDiags);
         System.out.println();
@@ -38,6 +38,16 @@ public class Main {
         Radnomizer.parsingArrayLists(arrOfNums, arrOfChars, bothDiags, sizeSecond);
         System.out.println(arrOfNums);
         System.out.println(arrOfChars);
+
+        StringBuilder strStr = new StringBuilder();
+        for (int i = 0; i < arrOfChars.size(); i++) {
+            strStr.append(arrOfChars.get(i)).append(",");
+        }
+
+       strStr.deleteCharAt(strStr.length()-1);
+        System.out.println(strStr);
+
+
 
 
 
