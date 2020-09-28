@@ -18,7 +18,7 @@ public class Main {
         String[] bothDiags = new String[primDiag.length + doublDiag.length];
         ArrayList<Double> arrOfNums = new ArrayList<>();
         ArrayList<String> arrOfChars = new ArrayList<>();
-//
+
 
         Radnomizer.initArrWithRandomStrings(matrix, strLength);
         Radnomizer.printArr(matrix);
@@ -40,40 +40,14 @@ public class Main {
         System.out.println(arrOfChars);
 
         StringBuilder strStr = new StringBuilder();
-        for (int i = 0; i < arrOfChars.size(); i++) {
-            strStr.append(arrOfChars.get(i)).append(",");
-        }
-
-       strStr.deleteCharAt(strStr.length()-1);
-        System.out.println(strStr);
+        Radnomizer.creatingStringBuilderFromChars(arrOfChars, strStr);
+        System.out.println();
+        Radnomizer.blowingByStrangeSymbol(arrOfNums);
 
 
 
 
 
-
-
-//        String[] string = new String[sizeFirst];
-//
-//        for (int i = 0; i < sizeFirst * 2; i++) {
-//            if(Radnomizer.isDouble(bothDiags[i])){
-//              num[i] = Double.parseDouble(bothDiags[i]);
-//
-//            }
-////            else {
-////
-////
-////            }
-
-
-//        }
-//        System.out.println(Arrays.toString(num));
-////        for (int i = 0; i < num.length; i++) {
-////            if( num[i] != null){
-////                arrOfNums[i] = num[i];
-////            }
-//        }
-//        System.out.println(Arrays.toString(arrOfNums));
 
 
     }

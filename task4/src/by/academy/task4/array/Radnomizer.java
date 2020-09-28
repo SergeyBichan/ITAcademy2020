@@ -82,11 +82,10 @@ public class Radnomizer {
             System.out.print(bothDiags[i] + " ");
     }
 
-    public static Boolean isDouble(String d){
+    public static Boolean isDouble(String d) {
         try {
             Double.parseDouble(d);
-        }
-        catch (NumberFormatException | NullPointerException nfe){
+        } catch (NumberFormatException | NullPointerException nfe) {
             return false;
         }
         return true;
@@ -94,15 +93,19 @@ public class Radnomizer {
 
 
     public static void parsingArrayLists(ArrayList<Double> arrOfNums, ArrayList<String> arrOfChars,
-                                         String[]bothDiags, int sizeSecond){
+                                         String[] bothDiags, int sizeSecond) {
         for (int i = 0; i < sizeSecond; i++) {
             if (Radnomizer.isDouble(bothDiags[i])) {
                 double d = Double.parseDouble(bothDiags[i]);
+                if (d - Math.floor(d) >= 0.7)
+                    d = Math.ceil(d);
+                else
+                    d = Math.floor(d);
                 arrOfNums.add(d);
 
-            }
-            else {
+            } else {
                 String s = bothDiags[i];
+
                 arrOfChars.add(s);
             }
 
@@ -110,12 +113,24 @@ public class Radnomizer {
         }
     }
 
+    public static void creatingStringBuilderFromChars(ArrayList<String> arrOfChars, StringBuilder strStr) {
+        for (int i = 0; i < arrOfChars.size(); i++) {
+            strStr.append(arrOfChars.get(i), 1, 4).append(",");
+
+        }
+
+        strStr.deleteCharAt(strStr.length() - 1);
+        System.out.println(strStr);
+    }
+
+    public static void blowingByStrangeSymbol(ArrayList<Double> arrOfNums) {
+        for (int i = 0; i < arrOfNums.size(); i++) {
+            System.out.print(arrOfNums.get(i) + "_");
+
+        }
 
 
-
-
-
-
+    }
 
 
 }
