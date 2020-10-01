@@ -7,7 +7,7 @@ public class Main {
         Animal animal2 = getAnimal("d");
        Animal animal = new Cat();
        Animal animal1 = new Dog();
-       animal2.getVoice();
+       animal1.getVoice();
 
     }
     private static Animal getAnimal(String animal){
