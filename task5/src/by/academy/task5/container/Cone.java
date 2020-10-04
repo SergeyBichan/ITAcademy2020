@@ -5,8 +5,8 @@ import static by.academy.task5.constant.Constant.RADIUS_MAX;
 public class Cone extends Container {
 
 
-    public Cone(int height, String name, int volumeFact, int density) {
-        super(height, name, volumeFact, density);
+    public Cone(String name,int height, int volumeFact, int density) {
+        super(name, height, volumeFact, density);
     }
 
     @Override

@@ -2,24 +2,28 @@ package by.academy.task5.container;
 
 
 public abstract class Container implements containerInterface {
+
     int height;
     String name;
     int volumeFact;
     int density;
 
 
+
     @Override
     public String toString() {
         return "Container{" +
-                "height=" + height +
-                ", name='" + name + '\'' +
+                "name='" + name +
+                ", height=" + height +
                 ", density=" + density +
                 ", volumeFact=" + volumeFact +
-                '}';
+                ", mass="
+                + MassCalculation() +
+                '}'  +  "\n";
     }
 
 
-    public Container(int height, String name, double volumeFact, int density) {
+    public Container(String name, int height, double volumeFact, int density) {
         if (height <= 100 && height >= 10) {
             this.volumeFact = (int) volumeFact;
             this.height = height;

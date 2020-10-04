@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7183c42-601c-4941-95cc-b5b8e439714c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/deck/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Cone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Cone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/ConeSmall.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/ConeSmall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Container.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Cylinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/SmallCylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/SmallCylinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/SmallSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/SmallSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/containerInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/container/containerInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/out/production/task5/by/academy/task5/ships/Ships.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Cone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Cone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/ConeSmall.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/ConeSmall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/SmallCylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/SmallCylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/SmallSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/SmallSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/containerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task5/src/by/academy/task5/container/containerInterface.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1iQJefcQ8KkKpJyIBKDwodG4qoQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7183c42-601c-4941-95cc-b5b8e439714c" name="Default Changelist" comment="" />
+      <created>1601833978681</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601833978681</updated>
+      <workItem from="1601833979733" duration="5000" />
+    </task>
+    <servers />
+  </component>
+</project>

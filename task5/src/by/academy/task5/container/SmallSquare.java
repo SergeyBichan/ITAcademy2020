@@ -3,8 +3,10 @@ package by.academy.task5.container;
 import static by.academy.task5.constant.Constant.RADIUS_MIN;
 
 public class SmallSquare extends Container {
-    public SmallSquare(int height, String name, double volumeFact, int density) {
-        super(height, name, volumeFact, density);
+
+
+    public SmallSquare(String name, int height, double volumeFact, int density) {
+        super(name, height, volumeFact, density);
     }
 
     @Override

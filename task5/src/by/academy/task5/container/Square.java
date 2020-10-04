@@ -3,8 +3,9 @@ package by.academy.task5.container;
 import static by.academy.task5.constant.Constant.RADIUS_MAX;
 
 public class Square extends Container {
-    public Square(int height, String name, double volumeFact, int density) {
-        super(height, name, volumeFact, density);
+
+    public Square(String name, int height, double volumeFact, int density) {
+        super(name, height, volumeFact, density);
     }
 
     @Override
