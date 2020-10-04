@@ -1,6 +1,6 @@
 package by.academy.task5.container;
 
-import static by.academy.task5.constant.Constant.RADIUS_MAX;
+
 import static by.academy.task5.constant.Constant.RADIUS_MIN;
 
 public class ConeSmall extends Container {
@@ -10,7 +10,7 @@ public class ConeSmall extends Container {
 
     @Override
     public double VolumeCalculation() {
-        return ((double)(height / 3) * Math.PI * Math.pow(RADIUS_MIN/2, 2));
+        return ((height / 3) * Math.PI * Math.pow(RADIUS_MIN/2, 2));
 
     }
 }

@@ -7,6 +7,7 @@ public abstract class Container implements containerInterface {
     int volumeFact;
     int density;
 
+
     @Override
     public String toString() {
         return "Container{" +
@@ -31,10 +32,10 @@ public abstract class Container implements containerInterface {
 
     @Override
     public double MassCalculation() {
-        return VolumeFact(volumeFact) * density;
+        return VolumeFact() * density;
     }
 
-    private double VolumeFact(int volumeFact) {
-        return VolumeCalculation() * volumeFact / 100;
+    private double VolumeFact() {
+        return VolumeCalculation() /100 * volumeFact;
     }
 }
