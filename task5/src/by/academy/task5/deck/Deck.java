@@ -29,8 +29,8 @@ public class Deck {
     @Override
     public String toString() {
         return "Deck{" +
-                "containers=" + Arrays.toString(containers) +
-                ", count=" + count +
+                "контейнеры=" + Arrays.toString(containers) +
+                ", количество контейнеров=" + count +
                 '}';
     }
 
@@ -39,8 +39,10 @@ public class Deck {
     }
 
     public void add(Container container) {
+
         if (count < containers.length) {
-            containers[0] = container;
+            if (containers[count] == null)
+                containers[count] = container;
             count++;
         }
     }
@@ -48,7 +50,7 @@ public class Deck {
 
     public void remove(String name) {
         if (count > 0) {
-            containers[0] = null;
+            containers[count] = null;
             count--;
         }
     }
