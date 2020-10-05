@@ -17,7 +17,7 @@ public class Runner {
         Container fifth = new Square("Большой квадрат", 25, 70, DENSITY_2000);
         Container sixth = new SmallSquare("Малый квадрат", 47, 64, DENSITY_1000);
 
-        Container[] cont = new Container[10];
+        //Container[] cont = new Container[4];
 
 
         Deck deck = new Deck(4);
@@ -27,6 +27,7 @@ public class Runner {
         deck.add(third);
         deck.add(fourth);
         deck.add(sixth);
+        deck.add(fifth);
 //
 ////        singleDeck.add(first);
 ////        singleDeck.add(second);
@@ -36,7 +37,9 @@ public class Runner {
 //        deck.add(second);
 
 
-        System.out.println(deck);
+        System.out.println(Arrays.toString(deck.getContainers()));
+        System.out.println();
+
 
 
     }

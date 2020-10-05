@@ -39,7 +39,6 @@ public class Deck {
     }
 
     public void add(Container container) {
-
         if (count < containers.length) {
             if (containers[count] == null)
                 containers[count] = container;
