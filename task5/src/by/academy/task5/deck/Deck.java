@@ -26,17 +26,29 @@ public class Deck {
         this.count = count;
     }
 
+
     @Override
     public String toString() {
-        return "Deck{" +
+        return "\nDeck{" +
                 "контейнеры=" + Arrays.toString(containers) +
                 ", количество контейнеров=" + count +
-                '}';
+                "}\n";
+    }
+
+    public double getMass() {
+        int i = 0;
+        double mass = 0;
+        while (i < count) {
+            mass += containers[i].MassCalculation ();
+            i++;
+        }
+        return mass;
     }
 
     public Deck(int containerCount) {
         this.containers = new Container[containerCount];
     }
+
 
     public void add(Container container) {
         if (count < containers.length) {
