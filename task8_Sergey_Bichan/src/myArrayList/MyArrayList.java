@@ -24,18 +24,30 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
 
     @Override
     public void add(int index, E obj) {
-        arrList[index] = obj;
         if (index == arrList.length) {
             growArray();
         }
-        index++;
-        size++;
+
+            arrList[index] = obj;
+            size++;
+
     }
 
-    public void growArray() {
-        E[] newArray = (E[]) new Object[arrList.length * 2];
-        for (int i = 0; i < newArray.length; i++) {
-            newArray[i] = arrList[index];
+    @Override
+    public E get(int index) {
+        if (index >= size || index < 0){
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index);
         }
+        return arrList[index];
+
+    }
+
+
+    public void growArray() {
+        E[] newArray = (E[]) new Object[arrList.length + 1];
+        for (int i = 0; i < arrList.length; i++) {
+            newArray[i] = arrList[i];
+        }
+        arrList = newArray;
     }
 }
