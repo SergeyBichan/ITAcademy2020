@@ -12,8 +12,11 @@ public class Main {
         arrList.add(6,7);
         arrList.add(7,8);
         arrList.add(8,65);
+        System.out.println(arrList);
         arrList.add(9,656);
-        arrList.add(-1,-1);
+        arrList.add(4,111);
+
+        //arrList.add(-1,-1);
 
         System.out.println(arrList);
 
