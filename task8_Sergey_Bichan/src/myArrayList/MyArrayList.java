@@ -7,7 +7,7 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
     private E[] arrList;
     private int index;
     private int size;
-    private static final int DEFAULT_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 5;
 
     @Override
     public String toString() {
@@ -24,7 +24,7 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
 
     @Override
     public void add(int index, E obj) {
-        growArray();
+            growArray();
             for (int i = size + 1; i > index; i--) {
                 arrList[i] = arrList[i-1];
             }
