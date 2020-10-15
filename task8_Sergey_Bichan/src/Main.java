@@ -21,6 +21,9 @@ public class Main {
         arrList.add(3,14);
         System.out.println(arrList);
 
+        arrList.remove(5);
+        System.out.println(arrList);
+
 
 
 

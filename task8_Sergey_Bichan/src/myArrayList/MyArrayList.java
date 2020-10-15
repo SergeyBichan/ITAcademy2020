@@ -89,6 +89,20 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
         return obj;
     }
 
+    @Override
+    public E remove(int index) {
+        if (index >= size) {
+            throw new RuntimeException("Index: " + index + ", Size " + size);
+        }
+        E obj = arrList[index];
+        int value = size - index - 1;
+        if (value > 0){
+            System.arraycopy(arrList, index+1, arrList, index, value);
+        }
+        arrList[--size] = null;
+        return obj;
+    }
+
 
     public void growArray() {
         E[] newArray = (E[]) new Object[arrList.length + 1];

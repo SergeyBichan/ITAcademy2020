@@ -7,6 +7,7 @@ public interface interfaceForMyArrayList<E> {
     int lastIndexOf(Object obj);
     boolean addAll(int index, MyArrayList<E> list);
     E set(int index, E obj);
+    public E remove(int index);
 
    // ListIterator<E> listIterator ();
 }
