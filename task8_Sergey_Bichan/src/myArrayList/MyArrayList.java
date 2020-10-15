@@ -90,12 +90,6 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
     }
 
 
-//    @Override
-//    public ListIterator<E> listIterator() {
-//        return null;
-//    }
-
-
     public void growArray() {
         E[] newArray = (E[]) new Object[arrList.length + 1];
         for (int i = 0; i < arrList.length; i++) {
