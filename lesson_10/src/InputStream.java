@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class InputStream {
     public static void main(String[] args) {
-        try (FileInputStream fin = new FileInputStream("D:\\ITAcademy2020\\notes.txt"))
+        try (FileInputStream fin = new FileInputStream("E:\\ITAcademy2020\\notes.txt"))
         {
             System.out.printf("File size: %d bytes \n", fin.available());
             int i = -1;

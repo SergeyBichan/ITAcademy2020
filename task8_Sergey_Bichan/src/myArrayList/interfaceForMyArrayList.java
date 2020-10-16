@@ -8,6 +8,8 @@ public interface interfaceForMyArrayList<E> {
     boolean addAll(int index, MyArrayList<E> list);
     E set(int index, E obj);
     public E remove(int index);
+    E subList(int start, int end);
+    int size();
 
    // ListIterator<E> listIterator ();
 }

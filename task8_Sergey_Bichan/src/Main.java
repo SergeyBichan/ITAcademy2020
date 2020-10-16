@@ -24,15 +24,20 @@ public class Main {
         arrList.remove(5);
         System.out.println(arrList);
 
+        System.out.println(arrList.get(4));
+        System.out.println(arrList.size());
+        System.out.println(arrList.lastIndexOf(1));
+        System.out.println(arrList.indexOf(1));
 
+        //arrList.subList(1,3);
 
+        arrList.remove(5);
+        System.out.println(arrList);
 
-
-
-
-
-
-
+        arrList.set(4,15);
+        System.out.println(arrList);
 
     }
-}
+
+    }
+

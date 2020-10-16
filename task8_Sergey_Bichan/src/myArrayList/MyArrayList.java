@@ -1,7 +1,8 @@
 package myArrayList;
 
-
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 public class MyArrayList<E> implements interfaceForMyArrayList<E> {
     private E[] arrList;
@@ -103,6 +104,21 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
         return obj;
     }
 
+    @Override
+    public E subList(int start, int end) {
+        E[] temp = arrList;
+        int lenght = end - start;
+        arrList = (E[]) new Object[lenght];
+        System.arraycopy(temp,start,arrList,0,lenght);
+
+        return null;
+    }
+
+    @Override
+    public int size() {
+        return arrList.length;
+    }
+
 
     public void growArray() {
         E[] newArray = (E[]) new Object[arrList.length + 1];
@@ -110,5 +126,15 @@ public class MyArrayList<E> implements interfaceForMyArrayList<E> {
             newArray[i] = arrList[i];
         }
         arrList = newArray;
+    }
+
+    public int getSize() {
+        int calc = 0;
+        for (int i = 0; i < arrList.length; i++) {
+            if (arrList[i] != null) {
+                calc = i + 1;
+            }
+        }
+        return calc;
     }
 }

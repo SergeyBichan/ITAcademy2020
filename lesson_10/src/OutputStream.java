@@ -4,7 +4,7 @@ import java.io.IOException;
 public class OutputStream {
     public static void main(String[] args){
         String text = "Hello World!";
-        try(FileOutputStream fos = new FileOutputStream("D:\\ITAcademy2020\\notes.txt"))
+        try(FileOutputStream fos = new FileOutputStream("E:\\ITAcademy2020\\notes.txt"))
         {
             //перевод строки в байты
             byte[] buffer = text.getBytes();
