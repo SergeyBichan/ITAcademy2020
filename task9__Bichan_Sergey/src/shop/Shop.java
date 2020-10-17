@@ -1,15 +1,22 @@
 package shop;
 
+import shop.good.Good;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Shop {
-    public void workShop(){
+    public Shop() {
+    }
+
+    public void workShop() {
+        ArrayList good = new ArrayList();
         while (true) {
             try {
                 Scanner sc = new Scanner(System.in);
-                System.out.println("0.Магазин");
-                System.out.println("1.Первый");
-                System.out.println("2.Второй");
+                System.out.println("Магазин");
+                System.out.println("1.Товары");
+                System.out.println("2.Заказы");
                 System.out.println("3.Выход");
                 int num = sc.nextInt();
                 if (1 == num) {
@@ -29,12 +36,28 @@ public class Shop {
     }
 
     private static void workingWithGoods() {
+        Scanner in = new Scanner(System.in);
         System.out.println("Работаем с товарами");
+        System.out.println("1.Создать товар");
+        System.out.println("2.Удлить товар");
+        System.out.println("3.Назад");
+        switch (in.nextInt()) {
+            case 1:
+
+
+            case 2:
+
+
+        }
 
     }
 
     private static void workingWithOrders() {
         System.out.println("Работаем с заказами");
+
+    }
+
+    private void createGood() {
 
     }
 }

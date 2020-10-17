@@ -1,32 +1,14 @@
 package by.academy.task5.ships;
 
-import by.academy.task5.deck.Deck;
-
-import java.util.Arrays;
-
-
-public class Ship {
+public abstract class Ship implements shipInterface {
     int numOfDecks;
-    private Deck[] decks;
-    private int count;
+
 
     @Override
     public String toString() {
-        return "\nShip{" +
-                "decks=" + Arrays.toString(decks) +
-                ", количество палуб=" + count +
-                '}' + "\n";
-    }
-
-
-    public double getMass() {
-        int i = 0;
-        double mass = 0;
-        while (i < count) {
-            mass += decks[i].getMass();
-            i++;
-        }
-        return (long)mass;
+        return "Ship{" +
+                "numOfDecks=" + numOfDecks +
+                '}';
     }
 
     public int getNumOfDecks() {
@@ -37,15 +19,29 @@ public class Ship {
         this.numOfDecks = numOfDecks;
     }
 
-    public Ship(int deckCount) {
-        this.decks = new Deck[deckCount];
+    public Ship(int numOfDecks) {
+        if(numOfDecks >= 1 || numOfDecks <=2){
+            this.numOfDecks = numOfDecks;
+        }
+        else {
+            System.out.println("Не корректный ввод!");
+        }
+
     }
 
-    public void add(Deck deck) {
-        if (count < decks.length) {
-            if (decks[count] == null)
-                decks[count] = deck;
-            count++;
+
+
+    public void pushContainerToShip(){
+        if (numOfDecks == 1){
+
+        }
+        if(numOfDecks == 2){
+
+        }
+        else {
+            System.out.println("Не корректный ввод");
         }
     }
+
+
 }
