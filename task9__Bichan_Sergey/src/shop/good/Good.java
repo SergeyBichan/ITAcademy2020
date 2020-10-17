@@ -1,21 +1,30 @@
 package shop.good;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Good {
     private int id = 0;
-
-    public Good() {
-    }
-
     private String name = "";
 
 
-    public Good(int id, String name, String date) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
+    public Good(int id, String name, GregorianCalendar gregorianCalendar) {
     }
+
+    @Override
+    public String toString() {
+        return "Good{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", date='" + date + '\'' +
+                '}';
+    }
+
+//    public Good(int id, String name, String date) {
+//        this.id = id;
+//        this.name = name;
+//        this.date = date;
+//    }
 
     public int getId() {
         return id;
