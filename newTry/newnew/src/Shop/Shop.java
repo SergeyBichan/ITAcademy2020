@@ -1,47 +1,45 @@
 package Shop;
 
 
-
 import java.util.Scanner;
+
 import Good.ListGoods;
 
 public class Shop {
     public void shopWork() {
+        Scanner sc = new Scanner(System.in);
 
-        while (true) {
-            try {
-                Scanner sc = new Scanner(System.in);
-                System.out.println("Магазин");
-                System.out.println("Введите 1 для работы с товарами");
-                System.out.println("Введите 2 для работы с заказами");
-                System.out.println("Введите 3 для выхода");
-                int num = sc.nextInt();
-                if (1 == num) {
+        try {
+            switch (sc.nextInt()) {
+                case 1:
                     workingWithGoods();
-                } else if (2 == num) {
+                case 2:
                     workingWithOrders();
-                } else if (3 == num) {
+                case 3:
                     break;
-                } else {
+                default:
                     System.out.println("Введите 1 или 2");
-                }
 
-            } catch (Exception e) {
-                System.out.println("Введите корректный символ");
             }
+
+        } catch (Exception e) {
+            System.out.println("Введите корректный символ");
+
         }
     }
 
 
-    private static void workingWithGoods() {
-        Scanner products = new Scanner(System.in);
+
+
+    private void workingWithGoods() {
+        Scanner in = new Scanner(System.in);
         System.out.println("Работаем с товарами");
         System.out.println("1->Добавить товар");
         System.out.println("2->Удалить товар");
         System.out.println("3->Посмотреть список товаров");
         System.out.println("4->Назад");
         System.out.print("-->");
-        switch (products.nextInt()) {
+        switch (in.nextInt()) {
             case 1:
                 ListGoods goodForShop = new ListGoods();
                 goodForShop.addProducts();
@@ -55,6 +53,7 @@ public class Shop {
                 System.out.println("\n Cписок товаров:");
                 list.viewProducts();
                 System.out.println("\n");
+
 
 
             case 4:

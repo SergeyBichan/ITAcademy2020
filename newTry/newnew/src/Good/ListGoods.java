@@ -3,7 +3,7 @@ package Good;
 import java.io.*;
 
 public class ListGoods {
-    public static void viewProducts() {
+    public void viewProducts() {
         try (FileInputStream fin = new FileInputStream ("goods.txt")) {
             int i = -1;
             while ((i = fin.read ()) != -1) {
@@ -17,7 +17,7 @@ public class ListGoods {
 
     }
 
-    public static void addProducts(){
+    public void addProducts(){
         try(BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
             BufferedWriter bw = new BufferedWriter (new FileWriter ("goods.txt",true)))
         {
