@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class Shop {
     public void shopWork() {
-        Scanner in = new Scanner(System.in);
+
         try {
+            Scanner in = new Scanner(System.in);
             System.out.println("Магазин");
             System.out.println("Введите 1 для работы с товарами");
             System.out.println("Введите 2 для работы с заказами");
@@ -25,7 +26,6 @@ public class Shop {
         }
 
 
-
     }
 
 
@@ -40,8 +40,8 @@ public class Shop {
         System.out.println("3->Посмотреть список товаров");
         System.out.println("4->Назад");
         ListGood list = new ListGood();
+        Scanner in = new Scanner(System.in);
         try {
-            Scanner in = new Scanner(System.in);
             switch (in.nextInt()) {
                 case 1:
                     list.addProducts();
