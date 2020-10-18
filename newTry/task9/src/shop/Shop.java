@@ -67,6 +67,7 @@ public class Shop {
                             new InputStreamReader(
                                     new FileInputStream("goods.txt"), Charset.forName("UTF-8")));
 
+
                     String line;
                     while ((line = reader.readLine()) != null) {
                         System.out.println(line);

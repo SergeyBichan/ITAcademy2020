@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/newTry.iml" filepath="$PROJECT_DIR$/.idea/newTry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streamsTrying/streamsTrying.iml" filepath="$PROJECT_DIR$/streamsTrying/streamsTrying.iml" />
+      <module fileurl="file://$PROJECT_DIR$/task9/task9.iml" filepath="$PROJECT_DIR$/task9/task9.iml" />
+    </modules>
+  </component>
+</project>
