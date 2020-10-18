@@ -44,20 +44,21 @@ public class Shop {
         System.out.println("4.Вернуться обратно");
         switch (in.nextInt()) {
             case 1:
-                String text = "Hello world!"; // строка для записи
+                //String text; // строка для записи
                 try (FileOutputStream fos = new FileOutputStream("goods.txt")) {
                     // перевод строки в байты
-                    byte[] buffer = text.getBytes();
+                    byte[] buffer = in.nextLine().getBytes();
 
-                    fos.write(buffer, 0, buffer.length);
+                    fos.write(buffer);
                 } catch (IOException ex) {
 
                     System.out.println(ex.getMessage());
                 }
                 System.out.println("The file has been written");
-                workingWithGoods();
+//                workingWithGoods();
 
             case 2:
+                workingWithGoods();
 
             case 3:
                 BufferedReader reader = null;
@@ -86,6 +87,10 @@ public class Shop {
 
             case 4:
                 break;
+
+            default:
+                System.out.println("Введите корректно");
+                workingWithGoods();
 
         }
 
