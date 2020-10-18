@@ -6,9 +6,10 @@ import java.util.Scanner;
 
 public class Shop {
     public void shopWork() {
+        Scanner in = new Scanner(System.in);
 
         try {
-            Scanner in = new Scanner(System.in);
+
             System.out.println("Магазин");
             System.out.println("Введите 1 для работы с товарами");
             System.out.println("Введите 2 для работы с заказами");
