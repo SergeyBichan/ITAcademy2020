@@ -5,6 +5,7 @@ import shop.good.GoodList;
 import java.util.Scanner;
 
 import static shop.good.GoodList.addToArrayList;
+import static shop.good.GoodList.readerFile;
 
 public class Shop {
 
@@ -24,7 +25,7 @@ public class Shop {
                     workingWithOrders();
                 case 3:
                     System.out.println("Досвидос");
-                    break;
+                    System.exit(0);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,8 +58,10 @@ public class Shop {
 
 
                 case 4:
-                    shopWork();
+                    //shopWork();
                     //addToArrayList();
+                    readerFile();
+                    workingWithGoods();
 
 
             }
@@ -69,6 +72,8 @@ public class Shop {
     }
 
     private static void workingWithOrders() {
+        System.out.println("Пока не реализовано!");
+        shopWork();
 
     }
 

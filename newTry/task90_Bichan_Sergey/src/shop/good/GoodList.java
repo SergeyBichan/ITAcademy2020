@@ -1,16 +1,15 @@
 package shop.good;
 
+import org.w3c.dom.NodeList;
 import shop.Shop;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class GoodList {
-
-
     public static void addGoods() {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -44,12 +43,5 @@ public class GoodList {
 
     }
 
-    public static void addToArrayList(){
-        Scanner in = new Scanner("goods.txt");
-        List<String> unit = new ArrayList<String>();
-        while(in.hasNextLine()){
-            unit.add(in.nextLine());
-        }
-        System.out.println(unit);
-    }
+
 }
