@@ -30,8 +30,10 @@ public class Main {
         HashMap<Integer, String> hMapNumbers = new HashMap<Integer, String>();
         //key-value pairs
         Scanner in = new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
+        int i = 0;
+        while (i < 3) {
             hMapNumbers.put(in.nextInt(), in.nextLine());
+            i++;
         }
         //new file object
         File file = new File(outputFilePath);
