@@ -19,6 +19,10 @@ public class Cpu {
         return Objects.hash(getFrequency());
     }
 
+    public void setFrequency(double frequency) {
+        this.frequency = frequency + 100;
+    }
+
     public Cpu() { }
 
     public Cpu(String name, double frequency) {

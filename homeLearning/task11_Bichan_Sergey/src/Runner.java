@@ -1,7 +1,6 @@
 import cpu.Cpu;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Runner {
@@ -29,22 +28,47 @@ public class Runner {
         col.add(cpu9);
         col.add(cpu10);
 
-        Collection<Cpu> streamFromCol = col.stream().filter(c -> c.getFrequency() >= 4.8).collect(Collectors.toList());
+        List<Cpu> streamFromCol = col.stream().filter(c ->
+                c.getFrequency() >= 4.8).collect(Collectors.toList());
         System.out.println("Cool CPU's are: " + streamFromCol);
 
-        Collection<Cpu> collectionWithSkip = col.stream().skip(2).collect(Collectors.toList());
+        List<Cpu> collectionWithSkip = col.stream()
+                .skip(2).collect(Collectors.toList());
         System.out.println(collectionWithSkip);
 
-        Collection<Cpu> collectionWithDistinct = col.stream().distinct().collect(Collectors.toList());
+        List<Cpu> collectionWithDistinct = col.stream().distinct()
+                .collect(Collectors.toList());
         System.out.println(collectionWithDistinct);
 
-        Collection<String> collectionWithMap = col.stream()
+        List<String> collectionWithMap = col.stream()
                 .map((s) -> "\n" + s.getName() + "_1 " +
                         s.getFrequency() + "_1")
                 .collect(Collectors.toList());
         System.out.println(collectionWithMap);
 
 
+        List<Cpu> collectionWithPeek = col.stream()
+                .peek((p) -> System.out.print
+                        ("\n" + (1 + p.getFrequency()) + " = " + p.getName() + "dfk "))
+                .collect(Collectors.toList());
+
+
+        List<Cpu> collectionWithLimit =
+                col.stream().limit(2).collect(Collectors.toList());
+        System.out.println(collectionWithLimit);
+
+        List<Cpu> collectionWithSorted = col.stream()
+                .sorted(Comparator.comparing(Cpu::getFrequency))
+                .collect(Collectors.toList());
+        System.out.println(collectionWithSorted);
+
+
+        Optional<Cpu> collectionWithFindFirst = streamFromCol.stream().findFirst();
+        System.out.println(collectionWithFindFirst);
+
+
+
+        System.out.println();
 
 
     }
