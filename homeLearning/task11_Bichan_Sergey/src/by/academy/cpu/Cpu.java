@@ -1,4 +1,4 @@
-package cpu;
+package by.academy.cpu;
 
 import java.util.Objects;
 

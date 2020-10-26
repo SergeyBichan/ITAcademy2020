@@ -1,4 +1,6 @@
-import cpu.Cpu;
+package by.academy;
+
+import by.academy.cpu.Cpu;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -40,6 +42,7 @@ public class Runner {
                 .collect(Collectors.toList());
         System.out.println(collectionWithDistinct);
 
+
         List<String> collectionWithMap = col.stream()
                 .map((s) -> "\n" + s.getName() + "_1 " +
                         s.getFrequency() + "_1")
@@ -66,9 +69,28 @@ public class Runner {
         Optional<Cpu> collectionWithFindFirst = streamFromCol.stream().findFirst();
         System.out.println(collectionWithFindFirst);
 
+        List<Cpu> findFirstCpu = Collections.singletonList (col.stream ().findFirst ().orElse (cpu1));
+        System.out.println (findFirstCpu + "\n\n");
+
+        List<Cpu> findAnyCpu = Collections.singletonList(col.stream().findAny().orElse(cpu3));
+        System.out.println(findAnyCpu + "\n\n");
 
 
-        System.out.println();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
